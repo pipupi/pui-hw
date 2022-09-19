@@ -1,3 +1,19 @@
+.rollcard:hover{
+    
+    width:200px;
+    margin: 20px;
+    flex-flow:column wrap;
+    display:flex;
+    box-sizing: border-box;
+    background-color:yellow;  
+}
+.navitxt:hover{
+    font-size:18px;
+    color:black;
+    background-color: yellow;
+    
+}
+
 .fit-logo{
     width: 250px;
 }
@@ -21,15 +37,7 @@
     box-sizing: border-box;
     background-color:white;  
 }
-.rollcard:hover{
-    
-    width:200px;
-    margin: 20px;
-    flex-flow:column wrap;
-    display:flex;
-    box-sizing: border-box;
-    background-color:yellow;  
-}
+
 .detailcard{
     
     width: 200px;
@@ -91,12 +99,7 @@
     color:black;
 }
 
-.navitxt:hover{
-    font-size:18px;
-    color:black;
-    background-color: yellow;
-    
-}
+
 h1{
     font-size:24px;
 }
