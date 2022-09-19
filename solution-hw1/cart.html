@@ -1,15 +1,73 @@
-<!DOCTYPE html>
-<html lang="en">
-  <meta charset="UTF-8">
-  <title>Page Title</title>
-  
+html>
+  <head>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
   <body>
+    <a href="./gallery.html"></a>
+      <img class="fit-logo" src="./assets/logo/logo-01.svg" alt="main logo for BunBun"/>
+    </a>
+    <hr style="height:2px; background-color: black; color:black">
 
-    <h1>I am the solution to HW1!</h1>
+    
+    <div class="col">
 
-    <p>
-        And I can link to <a href="./bun.html">other pages.</a>
-    </p>
+      <div class="navitxt">
+        <a href="./detail.html">PRODUCTS</a>
+      </div>
+  
+      <div class="navitxt">
+        <a href="./CART.html">CART</a>
+      </div>
 
+      <h1>
+        Shopping Cart
+      </h1>
+
+      <div class="cartcard">
+        <img class="cartpic"src="./assets/products/original-cinnamon-roll.jpg" alt="original-cinnamon-roll"/>
+        <div class="carttxt">
+          Remove
+        </div>
+        <div class="cartname">
+          Original cinnamon roll
+        </div>
+        <div class="cartname">
+          Glazing: Keep original
+        </div>
+        <div class="cartname">
+          Pack Size: 1
+        </div>
+        <div class="cartprice">
+          $ 2.49
+        </div>
+      </div>
+
+      <div class="cartcard">
+        <img class="cartpic"src="./assets/products/double-chocolate-cinnamon-roll.jpg" alt="double-chocolate-cinnamon-roll"/>
+        <div class="carttxt">
+          Remove
+        </div>
+        <div class="cartname">
+          Original cinnamon roll
+        </div>
+        <div class="cartname">
+          Glazing: Sugar milk
+        </div>
+        <div class="cartname">
+          Pack Size: 6
+        </div>
+        <div class="cartprice">
+          $ 27.45
+        </div>
+      </div>
+    </div>
+    <hr style="height:2px; width:50%; background-color: black; color:black">
+    <div class="col">
+      Total: $ 29.94
+      <button class="buttonaddtocart" type="button" style="background-color:yellow;">
+        Checkout
+      </button>
+    </div>
+    
   </body>
 </html>

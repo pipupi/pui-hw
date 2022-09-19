@@ -1,3 +1,91 @@
-.fit-picture{
+.fit-logo{
     width: 250px;
+}
+
+.col{
+    flex-flow:column wrap;
+    display:flex;
+    align-items:center;
+}
+.row{
+    flex-flow:row;
+    display:flex;
+    align-items:center;
+}
+.rollcard{
+    
+    width:200px;
+    margin: 20px;
+    flex-flow:column wrap;
+    display:flex;
+    box-sizing: border-box;
+    background-color:white;  
+}
+.detailcard{
+    
+    width: 200px;
+
+    flex-flow:column wrap;
+    display:flex;
+    box-sizing: border-box;
+    background-color:white;  
+}
+.cartcard{
+    
+    width: 200px;
+    margin: 20px;
+    flex-flow:column wrap;
+    display:flex;
+    box-sizing: border-box;
+    background-color:white; 
+    align-items:center 
+}
+
+.rollpic{
+    
+    width:200px;
+    height:200px;
+    
+}
+.detailpic{
+    
+    width:400px;
+    height:400px;
+}
+
+.cartpic{
+    
+    width:100px;
+    height:100px;
+}
+.rollname{
+    font-size:14px;
+    text-decoration:underline;
+
+}
+.carttxt{
+    font-size:4px;
+    text-decoration:underline;
+
+    
+}
+.rollprice{
+    font-size:14px;
+}
+.detailprompt{
+    font-size:14px;
+    margin: 20px;
+}
+
+.navitxt{
+    font-size:18px;
+    color:black
+}
+h1{
+    font-size:24px;
+}}
+
+.buttonaddtocart{
+    padding-left: 100px;
+    background-color: yellow;
 }
