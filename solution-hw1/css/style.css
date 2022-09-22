@@ -1,7 +1,7 @@
 .rollcard:hover{
-    
-    width:200px;
-    margin: 20px;
+    padding:5px;
+    width:auto;
+    margin: auto;
     flex-flow:column wrap;
     display:flex;
     box-sizing: border-box;
@@ -29,9 +29,9 @@
     align-items:center;
 }
 .rollcard{
-    
-    width:200px;
-    margin: 20px;
+    padding:5px;
+    width:auto;
+    margin: auto;
     flex-flow:column wrap;
     display:flex;
     box-sizing: border-box;
@@ -40,8 +40,8 @@
 
 .detailcard{
     
-    width: 200px;
-
+    width: 220px;
+    margin: 20px;
     flex-flow:column wrap;
     display:flex;
     box-sizing: border-box;
@@ -49,31 +49,35 @@
 }
 .cartcard{
     
-    width: 200px;
+    width: 220px;
     margin: 20px;
     flex-flow:column wrap;
     display:flex;
     box-sizing: border-box;
     background-color:white; 
-    align-items:center 
+    align-items:center;
 }
 
 .rollpic{
     
     width:200px;
     height:200px;
+    border: solid black 2px;
+
     
 }
 .detailpic{
     
     width:400px;
     height:400px;
+    border: solid black 4px;
 }
 
 .cartpic{
     
     width:100px;
     height:100px;
+    border: solid black 1px;
 }
 .rollname{
     font-size:14px;
@@ -88,6 +92,7 @@
 }
 .rollprice{
     font-size:14px;
+    text-decoration:none;
 }
 .detailprompt{
     font-size:14px;
