@@ -1,34 +1,46 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
+  <meta charset="UTF-8">
   <head>
     <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
-    <a href="./index.html"></a>
-      <img class="fit-logo" src="./assets/logo/logo-01.svg" alt="main logo for BunBun"/>
-    </a>
-    <hr style="height:2px; background-color: black; color:black">
-
-    
-    <div class="col">
-
-      <div class="navitxt">
-        <a href="./index.html" style="color: black;">PRODUCTS</a>
-      </div>
-  
-     
-      <div class="navitxt">
-        <a href="./cart.html" style="color: black;">CART</a>
-      </div>
+    <div class="header">
       
+      <a href="./index.html"></a>
+        <img class="fit-logo" src="./assets/logo/logo-01.svg" alt="main logo for BunBun"/>
+      </a>
+          
+      <div class="header_right">
+        
+        <div class="nav">
 
-      <h1>
-        Original cinnamon roll
-      </h1>
+
+          <div class="highlighted">
+            <a href="./index.html" class="navitxt">PRODUCTS</a>
+          </div>
+      
+          <div class="navitxt">
+            <a href="./cart.html" class="navitxt">CART</a>
+          </div>
+        </div>
+
+        <hr>
+
+        <h1>
+          Original cinnamon roll
+        </h1>
+      </div>
+    </div>
+    <div class="row">
+      
       <img class="detailpic"src="./assets/products/original-cinnamon-roll.jpg" alt="original-cinnamon-roll"/>
+      
       <div class="detailcard">
         <div class="detailprompt">
           Customize our delicious, hand-made cinamon roll to your liking!
         </div>
+        <br>
         <div class="detailprompt">
           Glazing:
         </div>
@@ -38,6 +50,7 @@
             <option value="Vanilla milk">Vanilla milk</option>
             <option value="Double chocolate">Double chocolate</option>    
         </select>
+        <br>
         <div class="detailprompt">
           Pack Size:
         </div>
@@ -47,9 +60,10 @@
             <option value="6">6</option>
             <option value="12">12</option>    
         </select>
-        <div class="row">
-            <p>$ 3.99</p> 
-            <button class="buttonaddtocart" type="button" style="background-color:yellow;">
+        <br>
+        <div class="baseline">
+            <div class="rollprice">$3.99 </div>
+            <button class="buttonaddtocart" type="button" >
                 Add to Cart
             </button>
         </div>  
