@@ -1,0 +1,115 @@
+.rollcard:hover{
+    padding:5px;
+    width:auto;
+    margin: auto;
+    flex-flow:column wrap;
+    display:flex;
+    box-sizing: border-box;
+    background-color:yellow;  
+}
+.navitxt:hover{
+    font-size:18px;
+    color:black;
+    background-color: yellow;
+    
+}
+
+.fit-logo{
+    width: 250px;
+}
+
+.col{
+    flex-flow:column wrap;
+    display:flex;
+    align-items:center;
+}
+.row{
+    flex-flow:row;
+    display:flex;
+    align-items:center;
+}
+.rollcard{
+    padding:5px;
+    width:auto;
+    margin: auto;
+    flex-flow:column wrap;
+    display:flex;
+    box-sizing: border-box;
+    background-color:white;  
+}
+
+.detailcard{
+    
+    width: 220px;
+    margin: 20px;
+    flex-flow:column wrap;
+    display:flex;
+    box-sizing: border-box;
+    background-color:white;  
+}
+.cartcard{
+    
+    width: 220px;
+    margin: 20px;
+    flex-flow:column wrap;
+    display:flex;
+    box-sizing: border-box;
+    background-color:white; 
+    align-items:center;
+}
+
+.rollpic{
+    
+    width:200px;
+    height:200px;
+    border: solid black 2px;
+
+    
+}
+.detailpic{
+    
+    width:400px;
+    height:400px;
+    border: solid black 4px;
+}
+
+.cartpic{
+    
+    width:100px;
+    height:100px;
+    border: solid black 1px;
+}
+.rollname{
+    font-size:14px;
+    text-decoration:underline;
+
+}
+.carttxt{
+    font-size:8px;
+    text-decoration:underline;
+
+    
+}
+.rollprice{
+    font-size:14px;
+    text-decoration:none;
+}
+.detailprompt{
+    font-size:14px;
+    margin: 20px;
+}
+
+.navitxt{
+    font-size:18px;
+    color:black;
+}
+
+
+h1{
+    font-size:24px;
+}
+
+.buttonaddtocart{
+    padding-left: 100px;
+    background-color: yellow;
+}
