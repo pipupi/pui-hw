@@ -4,6 +4,7 @@
   <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="./css/style.css" />
+    <script src="./js/rollsData.js" defer></script>
     <script src="./js/scripts.js" defer></script>
   </head>
   <body>
@@ -29,14 +30,14 @@
 
         <hr>
 
-        <h1>
+        <h1 id="productHeader">
           Original cinnamon roll
         </h1>
       </div>
     </div>
     <div class="row">
       
-      <img class="detailpic"src="./assets/products/original-cinnamon-roll.jpg" alt="original-cinnamon-roll"/>
+      <img class="detailpic"src="./assets/products/original-cinnamon-roll.jpg" alt="original-cinnamon-roll" id="productImage"/>
       
       <div class="detailcard">
         <div class="detailprompt">
@@ -57,7 +58,7 @@
         <br>
         <div class="baseline">
             <div class="rollprice" id="detailTotal">$2.49 </div>
-            <button class="buttonaddtocart" type="button" >
+            <button class="buttonaddtocart" type="button" id="addtocart" >
                 Add to Cart
             </button>
         </div>  
