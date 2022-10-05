@@ -102,12 +102,12 @@ const params = new URLSearchParams(queryString);
 const rollType = params.get('roll');
 
 let rollGlazing = allGlazing[glazingInd].glazing;
-let packSize = parseInt(allPacksize[packsizeInd].size);
+let packSize = allPacksize[packsizeInd].size;
 
 
 //Extract the current roll’s information
 let currentRoll = rolls[rollType];
-let basePrice = currentRoll['basePrice']
+let basePrice = currentRoll['basePrice'];
 
 function updateDetail(){
     let imageSrc = currentRoll['imageFile'];
@@ -123,7 +123,7 @@ function updateDetail(){
 function updateCart(){
     let newRoll = new Roll(rollType, rollGlazing, packSize, basePrice);
     cart.push(newRoll);
-    console.log(JSON.stringify(cart));
+    console.log(cart);
 
 }
 
