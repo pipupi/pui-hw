@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./css/style.css" />
+    <script src="./js/rollsData.js" defer></script>
+    <script src="./js/cartscript.js" defer></script>
+  </head>
+  <body>
+    <div class="header">
+      
+      <a href="./index.html"></a>
+        <img class="fit-logo" src="./assets/logo/logo-01.svg" alt="main logo for BunBun"/>
+      </a>
+          
+      <div class="header_right">
+        
+        <div class="nav">
+
+
+          <div class="navitxt">
+            <a href="./index.html" class="navitxt">PRODUCTS</a>
+          </div>
+      
+          <div class="highlighted">
+            <a href="./cart.html" class="navitxt">CART</a>
+          </div>
+        </div>
+
+        <hr>
+
+        <h1>
+          Shopping Cart
+        </h1>
+      
+      </div>
+    
+    </div>
+
+    <div class="cart_align" id = "cartcard-list">
+      
+      <template id="cart-template">
+        <div class="row" id="cartcard-total" >
+          <div class="cartcard">
+
+            <img class="cartpic"src="./assets/products/double-chocolate-cinnamon-roll.jpg" alt="double-chocolate-cinnamon-roll"/>
+            <div class="carttxt">
+              Remove
+            </div>
+          </div> <!-- END cartcard-left -->
+
+          <div class="cartcard">
+            <div class="cartname" id="cart-title">
+              Original cinnamon roll
+            </div>
+            <div class="cartname" id="cart-glazing"> 
+              Glazing: Sugar milk
+            </div>
+            <div class="cartname" id="cart-size">
+              Pack Size: 6
+            </div>
+          </div> <!-- END cartcard-mid -->
+
+          <div class="cartcard">
+            <div class="cartprice" >
+              $ 27.45
+            </div>
+          </div> <!-- END cartcard-right -->
+
+        </div> <!-- END cartcard-total -->
+      </template>
+
+      <hr>
+      <div class="row">
+        <div class="cartcard">
+        </div>
+
+        <div class="cartcard">
+          Total
+        </div>
+
+        <div class="cartcard">
+          <div class="cartprice">
+            $ 29.94
+          </div>
+        </div>
+
+      </div> <!-- END cartcard-total -->
+
+      <div class="row">
+        <div class="cartcard">
+        </div>
+
+        <div class="cartcard">
+          
+        </div>
+
+        <div class="cartcard">
+          <button class="buttoncheckout" type="button" >
+            Checkout
+          </button>
+        </div>
+
+      </div> <!-- END cartcard-button -->
+    </div> <!-- END cartcard-list -->
+
+    
+   
+      
+    </div>
+  </div>
+  
+  </body>
+</html>

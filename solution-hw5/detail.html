@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./css/style.css" />
+    <script src="./js/rollsData.js" defer></script>
+    <script src="./js/detailscript.js" defer></script>
+  </head>
+  <body>
+    <div class="header">
+      
+      <a href="./index.html"></a>
+        <img class="fit-logo" src="./assets/logo/logo-01.svg" alt="main logo for BunBun"/>
+      </a>
+          
+      <div class="header_right">
+        
+        <div class="nav">
+
+
+          <div class="highlighted">
+            <a href="./index.html" class="navitxt">PRODUCTS</a>
+          </div>
+      
+          <div class="navitxt">
+            <a href="./cart.html" class="navitxt">CART</a>
+          </div>
+        </div>
+
+        <hr>
+
+        <h1 id="productHeader">
+          Original cinnamon roll
+        </h1>
+      </div>
+    </div>
+    <div class="row">
+      
+      <img class="detailpic" alt="cinnamon-roll" id="productImage"/>
+      
+      <div class="detailcard">
+        <div class="detailprompt">
+          Customize our delicious, hand-made cinamon roll to your liking!
+        </div>
+        <br>
+        <div class="detailprompt">
+          Glazing:
+        </div>
+        <select id="glazingSelect" >   
+        </select>
+        <br>
+        <div class="detailprompt">
+          Pack Size:
+        </div>
+        <select id="packsizeSelect" >  
+        </select>
+        <br>
+        <div class="baseline">
+            <div class="rollprice" id="detailTotal"> </div>
+            <button class="buttonaddtocart" type="button" id="addtocart" >
+                Add to Cart
+            </button>
+        </div>  
+
+      </div>
+
+     
+      
+    </div>
+
+  </body>
+</html>
