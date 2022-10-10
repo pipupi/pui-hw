@@ -1,36 +1,4 @@
 
-
-//creating two arrays of glazing and packsize options for user to select
-
-let allGlazing = [
-    {   glazing:'Keep original',
-        priceAdaptation: 0.00,
-    },
-    {   glazing:'Sugar milk',
-        priceAdaptation: 0.00,
-    },
-    {   glazing:'Vanilla milk',
-        priceAdaptation: 0.50,
-    },
-    {   glazing:'Double chocolate',
-        priceAdaptation: 1.50,
-    },
-];
-let allPacksize = [
-    {   size:'1',
-        priceFactor: 1,
-    },
-    {   size:'3',
-        priceFactor: 3,
-    },
-    {   size:'6',
-        priceFactor: 5,
-    },
-    {   size:'12',
-        priceFactor: 10,
-    }, 
-];
-
 //select the dropdown menu that is currently empty to load in the options
 
 let glazingElement = document.querySelector('#glazingSelect');
