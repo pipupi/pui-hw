@@ -4,6 +4,7 @@
 let glazingElement = document.querySelector('#glazingSelect');
 let packsizeElement = document.querySelector('#packsizeSelect');
 let addtocartElement = document.querySelector('#addtocart');
+
 //using loops to add options into the selected menus
 //value is set to be the index
 
@@ -32,14 +33,14 @@ let glazingInd = 0;
 let packsizeInd = 0;
 
 //hint from the car lab code: keep track of the selected option
-function selectGlazing() {
-    glazingInd = parseInt(this.value);
+function selectGlazing(element) {
+    glazingInd = parseInt(element.value);
     updatePrice();
 }
 
 //hint from the car lab code: keep track of the selected option
-function selectPacksize() {
-    packsizeInd = parseInt(this.value);
+function selectPacksize(element) {
+    packsizeInd = parseInt(element.value);
     updatePrice();
 }
 
@@ -60,17 +61,22 @@ class Roll {
         this.basePrice = basePrice;
     }
 }
-//Create an empty array called cart
-const cart = [];
+//Create an empty array called cart if localStorage is empty.
+const rollArrayString = localStorage.getItem("storedRolls");
+    if (rollArrayString) {
+        cart = JSON.parse(rollArrayString);
+    } else {
+        let cart = [];
+    }
+
+//
+
 
 //Parse the URL parameter and store the current roll type as a variable
 const queryString = window.location.search;
 const params = new URLSearchParams(queryString);
 //specified by ?roll=somthing in HTML hrefs
 const rollType = params.get('roll');
-
-let rollGlazing = allGlazing[glazingInd].glazing;
-let packSize = allPacksize[packsizeInd].size;
 
 
 //Extract the current roll’s information
@@ -89,18 +95,21 @@ function updateDetail(){
 
 }
 function updateCart(){
+
+    let rollGlazing = allGlazing[glazingInd].glazing;
+    let packSize = allPacksize[packsizeInd].size;
+
+    console.log(rollGlazing);
+    console.log(packSize);
     let newRoll = new Roll(rollType, rollGlazing, packSize, basePrice);
     cart.push(newRoll);
     console.log(cart);
 
+    //save to local storage
+    const rollArrayString = JSON.stringify(cart);
+    localStorage.setItem("storedRolls", rollArrayString);
 }
 
-// hint from the car lab code: addEventListener to 
-// call get current selected option and call updatePrice function when user changes options
-
-glazingElement.addEventListener('change', selectGlazing)
-packsizeElement.addEventListener('change', selectPacksize)
-addtocartElement.addEventListener('click', updateCart)  
 updateDetail();
 
 

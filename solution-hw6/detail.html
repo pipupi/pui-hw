@@ -4,9 +4,11 @@
   <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="./css/style.css" />
+  
     <script src="./js/rollsData.js" defer></script>
+    
     <script src="./js/detailScript.js" defer></script>
-    <script src="./js/localStorage.js" defer></script>
+    
   </head>
   <body>
     <div class="header">
@@ -48,18 +50,18 @@
         <div class="detailprompt">
           Glazing:
         </div>
-        <select id="glazingSelect" >   
+        <select id="glazingSelect" onchange="selectGlazing(this)">   
         </select>
         <br>
         <div class="detailprompt">
           Pack Size:
         </div>
-        <select id="packsizeSelect" >  
+        <select id="packsizeSelect" onchange="selectPacksize(this)" >  
         </select>
         <br>
         <div class="baseline">
             <div class="rollprice" id="detailTotal"> </div>
-            <button class="buttonaddtocart" type="button" id="addtocart" >
+            <button class="buttonaddtocart" type="button" onclick="updateCart()">
                 Add to Cart
             </button>
         </div>  

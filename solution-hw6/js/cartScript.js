@@ -66,30 +66,18 @@ function createElement(roll){
     imageElement.src = "./assets/products/" + rolls[roll.type]['imageFile'];
     priceElement.innerHTML = '$' + priceTotal(roll).toFixed(2);
 
-    //update checkout price
-    checkoutprice += priceTotal(roll);
-    checkoutpriceElement.innerHTML= checkoutprice.toFixed(2);
-
-
-
-}
-
-const rollOne = addNewRoll(
-    "Original",
-    "Sugar milk",
-    "1",
-    rolls["Original"].basePrice,
-);
-
-
-for (const roll of rollSet) {
-    console.log(roll);
-    createElement(roll);
     let deleteBtn = roll.element.querySelector(".carttxt")
     deleteBtn.onclick = function(){
         deleteRoll(roll);
     }
+
+    //update checkout price
+    checkoutprice += priceTotal(roll);
+    checkoutpriceElement.innerHTML= checkoutprice.toFixed(2);
+
 }
+
+
 
 function deleteRoll(roll) {
     //update checkout price
@@ -100,5 +88,23 @@ function deleteRoll(roll) {
 
     //remove target
     roll.element.remove();
-    rollSet.delete(roll);
+    rollSet.delete(roll); 
+     
+    //save to local storage
+    const rollArray = Array.from(rollSet)
+    const rollArrayString = JSON.stringify(rollArray);
+    localStorage.setItem("storedRolls", rollArrayString);
+
+    
+    
 }
+//retrieve and display cart
+let cart = JSON.parse(localStorage.getItem("storedRolls"));
+
+    for (const item of cart) {
+        const rollSet = addNewRoll(item.type, item.glazing, item.size, item.basePrice);
+    }
+    for (const roll of rollSet) {
+        console.log(roll);
+        createElement(roll);
+    }
