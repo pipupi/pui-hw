@@ -1,9 +1,9 @@
+/*general*/
 html {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   color: #ffffff;
   font-family: "Courier New", "Open Sans", "Helvetica Neue", sans-serif;
-  background: rgb(0, 0, 0);
   /* background: rgb(110, 110, 110); */
   /* background: rgb(10, 10, 10); */
   background-size: cover;
@@ -47,35 +47,93 @@ ul {
 }
 
 
-.nav-height {
-    opacity: 100%;
-    background-color: transparent;
-    width: 100vw;
-    height: 16vh;
-    position: fixed;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    z-index: 201;
-  }
+/*flex layout*/
+
+
+.container {
+  display: flex;
+  flex-direction: row;
+ 
+}
+
+.col {
+  float: left;
+  width: 33.33%;
+ 
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.icon{
+  width:200px;
+  height:200px;
   
-  .nav-container {
-    opacity: 100%;
-    background-color: transparent;
-    width: 100vw;
-    height: 16vh;
-    position: relative;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    margin-left: 100px;
-    margin-right: 100px;
-    z-index: 100;
-  }
+}
+.nav{
+  display: flex;
   
-  .flexnav {
-    display: flex;
-    justify-content: flex-end;
+  gap:80px;
+  justify-content: end;
+  margin-bottom: 20px;
+  margin-right: 100px;
+}
+hr{
+  width: 100%;
+  height:2px; 
+  background-color: black; 
+  color:black;
+}
+.notecard {
+  flex-direction: row;
+
+  /* Since this notecard is a flexbox, the children of the notecard will sit
+    on the same line (instead of stacking on top of each other). This allows
+    us to divide the notecard into a left side (main content + footer) and a
+    right side (expand/collapse + toolbar).
+  */
+  display: flex;
+  
+  /* Set default width for the notecard (this will be the width when notecards
+    are all in a single column). For larger screens, we adjust this width, see
+    the @media query below. */
+  /* width: 450px; */
+  width: 100%; 
+  
+  
+  /* Add a margin to the top of the notecard, so that when they are all stacked
+    together, there is a space in between each card. */
+  margin-top: 20px;
+  
+  /* Add some padding, so that there is a buffer zone between the edge of the
+    notecard and the content inside. */
+  padding: 20px;
+  
+  /* Add rounded corners for the notecard. */
+  border-radius: 8px;
+  
+  /* Notecard background is slightly lighter than the webpage background. */
+  background-color: #212121;
+
+  flex-wrap: wrap;
+}
+
+  @media (min-width: 930px) {
+  .notecard{
+    align-content: flex-start;
+    width: 100%;
+    min-height: 190px;
+    flex-direction: column;
   }
+}
+  
+
+/*flex layout react to screen size*/
+@media screen and (max-width: 930px) {
+  .col {
+    width: 100%;
+  }
+
+}
