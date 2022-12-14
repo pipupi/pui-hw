@@ -2,25 +2,21 @@ $(document).ready(function() {
   
     var scrolling = false,
         curPage = 1,
-        pages = $(".img-cont").length / 2,
-        $left = $(".img-cont.left"),
-        $right = $(".img-cont.right");
+        pages = 4;
+        
     
-    function doMargins(paramPage) {
+    function doContents(paramPage) {
       
       scrolling = true;
       
       var _page = paramPage || curPage;
       
-      $left.each(function() {
+      $content.each(function() {
         var marginMult = parseInt($(this).attr("data-helper"), 10) + _page - 1;
         $(this).attr("style", "margin-left: "+ marginMult * 100 +"vh");
       });
       
-      $right.each(function() {
-        var marginMult = parseInt($(this).attr("data-helper"), 10) - _page + 1;
-        $(this).attr("style", "margin-right: "+ marginMult * 100 +"vh");
-      });
+      
       
       setTimeout(function() {
         scrolling = false;
@@ -31,7 +27,7 @@ $(document).ready(function() {
       if (curPage > 1) {
         curPage--;
         pagination(curPage);
-        doMargins();
+        doContents();
       }
     }
     
@@ -39,7 +35,7 @@ $(document).ready(function() {
       if (curPage < pages) {
         curPage++;
         pagination(curPage);
-        doMargins();
+        doContents();
       }
     }
     
