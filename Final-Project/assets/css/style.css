@@ -35,7 +35,7 @@ ul {
  
 }
 scene{
-  height: 100vh;
+ 
   align-items: center;
 }
 
@@ -48,7 +48,7 @@ scene{
   display:flex;
   flex-direction:column;
 
-  align-items: center;
+  align-items: left;
   justify-content:center;
  
 }
@@ -57,6 +57,11 @@ scene{
 .icon{
   width:15vw;
   height:15vw;
+  
+}
+.icon_detail{
+  width:30vw;
+  height:30vw;
   
 }
 .nav{
@@ -126,8 +131,9 @@ hr{
     width: 80%;
   }
   .scene{
-    overflow: auto;
-    flex: 1;
+    overflow-x: scroll;
+    overflow-y: scroll;
+    
   }
 
  
@@ -173,6 +179,15 @@ hr{
   color: #485CC9;
 }
 
+.row .col .content .painpoints li {
+  display: none;
+  will-change: opacity;
+  font-family: ptsans-bold;
+}
+.row .col .content .painpoints li.active{
+  display: block;
+}
+
 @media screen and (max-width: 930px) {
   .pagination {
  
@@ -191,4 +206,3 @@ hr{
   }
 
 }
-
